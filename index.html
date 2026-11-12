@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional credentials of P. V. Gadgil & Co., Chartered Accountants, Mumbai.">
+  <meta name="theme-color" content="#145886">
+  <title>P. V. Gadgil & Co. | Chartered Accountants</title>
+  <style>
+    :root {
+      --navy: #145886;
+      --blue: #1f6e9c;
+      --green: #55b848;
+      --saffron: #f37920;
+      --ink: #202a35;
+      --muted: #5b6573;
+      --line: #d8e5ed;
+      --pale: #f3f7fa;
+      --white: #ffffff;
+      --shadow: 0 18px 48px rgba(20, 88, 134, .12);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .section.alt { background: var(--pale); }
+    .section-label {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin-top: 0; color: var(--navy); line-height: 1.15; }
+    h1 { margin-bottom: 18px; font-size: clamp(2.7rem, 6vw, 5.6rem); letter-spacing: -.055em; }
+    h2 { margin-bottom: 18px; font-size: clamp(2rem, 4vw, 3.45rem); letter-spacing: -.035em; }
+    h3 { margin-bottom: 10px; font-size: 1.18rem; }
+    p { margin: 0 0 1rem; }
+    .lead { max-width: 820px; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.28rem); }
+
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      border-bottom: 1px solid rgba(20, 88, 134, .1);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(14px);
+    }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { width: 54px; height: 44px; object-fit: contain; }
+    .brand strong { display: block; color: var(--navy); font-family: Georgia, serif; font-size: 1.05rem; letter-spacing: .02em; }
+    .brand span { display: block; color: var(--green); font-size: .69rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a { color: var(--muted); font-size: .88rem; font-weight: 700; text-decoration: none; }
+    .nav-links a:hover, .nav-links a:focus { color: var(--navy); }
+    .menu-button { display: none; border: 0; background: transparent; color: var(--navy); font-size: 1.65rem; cursor: pointer; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 112px 0 82px;
+      background:
+        radial-gradient(circle at 92% 5%, rgba(85, 184, 72, .13), transparent 24rem),
+        linear-gradient(145deg, #f7fbfd 0%, #ffffff 62%);
+    }
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -170px;
+      width: 460px;
+      height: 460px;
+      border: 44px solid rgba(243, 121, 32, .07);
+      border-radius: 50%;
+      content: "";
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.3fr .7fr; gap: 72px; align-items: center; }
+    .eyebrow { color: var(--green); font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .hero h1 span { color: var(--blue); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 22px;
+      border: 2px solid var(--navy);
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button.secondary { background: transparent; color: var(--navy); }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20, 88, 134, .2); }
+    .credential-card {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--green);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .credential-card img { width: 160px; margin: 0 auto 26px; }
+    .credential-row { display: flex; justify-content: space-between; gap: 20px; padding: 13px 0; border-top: 1px solid var(--line); }
+    .credential-row span { color: var(--muted); font-size: .86rem; }
+    .credential-row strong { color: var(--navy); text-align: right; }
+
+    .intro-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 72px; }
+    .copy p { text-align: justify; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+    .stat { padding: 22px; border-left: 4px solid var(--green); background: var(--pale); }
+    .stat strong { display: block; color: var(--navy); font-size: 1.45rem; }
+    .stat span { color: var(--muted); font-size: .84rem; }
+
+    .framework-wrap {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 64px;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .framework-copy p { color: var(--muted); text-align: justify; }
+    .framework-visual {
+      position: relative;
+      min-height: 510px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at center, rgba(20,88,134,.11) 0 26%, transparent 27%),
+        var(--white);
+      box-shadow: var(--shadow);
+    }
+    .framework-visual::before,
+    .framework-visual::after {
+      position: absolute;
+      z-index: 0;
+      background: var(--line);
+      content: "";
+    }
+    .framework-visual::before { top: 50%; right: 12%; left: 12%; height: 2px; }
+    .framework-visual::after { top: 12%; bottom: 12%; left: 50%; width: 2px; }
+    .framework-center {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      width: 168px;
+      height: 168px;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      border: 8px solid var(--white);
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 16px 34px rgba(20,88,134,.28);
+    }
+    .framework-center strong { font-family: Georgia, serif; font-size: 1.1rem; line-height: 1.3; }
+    .framework-node {
+      position: relative;
+      z-index: 2;
+      min-height: 205px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--pale);
+    }
+    .framework-node:nth-child(2) { border-top: 5px solid var(--blue); }
+    .framework-node:nth-child(3) { border-top: 5px solid var(--green); }
+    .framework-node:nth-child(4) { border-bottom: 5px solid var(--saffron); }
+    .framework-node:nth-child(5) { border-bottom: 5px solid var(--navy); }
+    .framework-node span { color: var(--green); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .framework-node strong { margin: 5px 0 8px; color: var(--navy); font-size: 1.08rem; }
+    .framework-node small { color: var(--muted); font-size: .82rem; line-height: 1.45; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      height: 100%;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .card-number { display: inline-grid; width: 38px; height: 38px; margin-bottom: 18px; place-items: center; border-radius: 50%; background: var(--navy); color: var(--white); font-weight: 800; }
+    .card p { margin-bottom: 0; color: var(--muted); text-align: justify; }
+    .service-card { border-top: 4px solid var(--blue); }
+    .service-card:nth-child(3n+2) { border-top-color: var(--green); }
+    .service-card:nth-child(3n+3) { border-top-color: var(--saffron); }
+
+    .timeline { position: relative; margin-top: 46px; }
+    .timeline::before { position: absolute; top: 6px; bottom: 6px; left: 16px; width: 2px; background: var(--line); content: ""; }
+    .timeline-item { position: relative; display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 0 0 38px 58px; }
+    .timeline-item::before { position: absolute; top: 4px; left: 8px; width: 18px; height: 18px; border: 5px solid var(--white); border-radius: 50%; background: var(--green); box-shadow: 0 0 0 2px var(--green); content: ""; }
+    .timeline-date { color: var(--blue); font-weight: 800; }
+    .timeline-content { padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+    .timeline-content h3 { margin-bottom: 4px; }
+    .role { margin-bottom: 8px; color: var(--green); font-size: .88rem; font-weight: 800; text-transform: uppercase; }
+    .timeline-content p { color: var(--muted); text-align: justify; }
+
+    .competency-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--line); }
+    .competency { padding: 28px; background: var(--white); }
+    .competency p { margin: 0; color: var(--muted); text-align: justify; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+    .chip { padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); color: var(--navy); font-size: .86rem; font-weight: 700; }
+
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; }
+    .process-step { position: relative; padding: 28px 22px; border-radius: 16px; background: var(--navy); color: var(--white); }
+    .process-step:nth-child(even) { background: var(--blue); }
+    .process-step strong { display: block; margin-bottom: 8px; font-size: 1.05rem; }
+    .process-step p { margin: 0; color: rgba(255,255,255,.82); font-size: .92rem; }
+
+    .contact-panel { display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .contact-title { padding: 48px; background: var(--navy); color: var(--white); }
+    .contact-title h2 { color: var(--white); }
+    .contact-title p { color: rgba(255,255,255,.8); }
+    .contact-details { padding: 48px; background: var(--white); }
+    .contact-item { padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .contact-item:last-child { border-bottom: 0; }
+    .contact-item span { display: block; color: var(--green); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-item a, .contact-item strong { color: var(--navy); font-weight: 750; text-decoration: none; }
+
+    footer { padding: 34px 0; background: #0f4164; color: rgba(255,255,255,.78); font-size: .8rem; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 28px; }
+    .footer-grid p { margin: 0; }
+    .information-note { max-width: 820px; text-align: justify; }
+
+    @media (max-width: 920px) {
+      .menu-button { display: block; }
+      .nav-links { position: absolute; top: 78px; right: 20px; left: 20px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: var(--shadow); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 11px 14px; }
+      .hero-grid, .intro-grid, .contact-panel { grid-template-columns: 1fr; }
+      .framework-wrap { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .hero { padding-top: 78px; }
+      .credential-card { max-width: 600px; }
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .container { width: min(100% - 28px, 1160px); }
+      .section { padding: 68px 0; }
+      .brand img { width: 46px; }
+      .brand strong { font-size: .93rem; }
+      .grid, .stats, .competency-grid, .process { grid-template-columns: 1fr; }
+      .framework-visual { min-height: auto; grid-template-columns: 1fr; padding: 18px; background: var(--white); }
+      .framework-visual::before, .framework-visual::after { display: none; }
+      .framework-center { position: static; width: auto; height: auto; border: 0; border-radius: 14px; transform: none; }
+      .framework-node { min-height: 0; }
+      .timeline-item { grid-template-columns: 1fr; gap: 5px; padding-left: 48px; }
+      .credential-card, .contact-title, .contact-details { padding: 28px; }
+      .credential-row { flex-direction: column; gap: 2px; }
+      .credential-row strong { text-align: left; }
+      .footer-grid { flex-direction: column; }
+    }
+
+    @media print {
+      .site-header, .hero-actions, .menu-button { display: none !important; }
+      body { font-size: 11pt; }
+      .hero, .section { padding: 32px 0; }
+      .hero-grid, .intro-grid, .contact-panel { grid-template-columns: 1fr 1fr; }
+      .card, .credential-card, .contact-panel { box-shadow: none; break-inside: avoid; }
+      footer { background: white; color: var(--muted); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="P. V. Gadgil & Co. home">
+        <img src="ca-india-logo.png" alt="CA India logo">
+        <span><strong>P. V. Gadgil &amp; Co.</strong>Chartered Accountants</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">Overview</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#competencies">Competencies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Firm Credentials</p>
+          <h1>P. V. Gadgil <span>&amp; Co.</span></h1>
+          <p class="lead">A Mumbai-based Chartered Accountancy firm providing assurance, taxation, financial reporting, accounting and advisory services.</p>
+          <div class="hero-actions">
+            <a class="button" href="#services">View Professional Services</a>
+            <a class="button secondary" href="#contact">Contact Details</a>
+          </div>
+        </div>
+        <aside class="credential-card" aria-label="Firm credentials">
+          <img src="ca-india-logo.png" alt="Chartered Accountants India logo">
+          <div class="credential-row"><span>Firm Registration No.</span><strong>149251W</strong></div>
+          <div class="credential-row"><span>Year of Establishment</span><strong>2018</strong></div>
+          <div class="credential-row"><span>Proprietor</span><strong>CA Prathamesh Vaman Gadgil</strong></div>
+          <div class="credential-row"><span>Membership No.</span><strong>187721</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container intro-grid">
+        <div>
+          <p class="section-label">Firm Overview</p>
+          <h2>Professional attention. Structured execution.</h2>
+        </div>
+        <div class="copy">
+          <p>P. V. Gadgil &amp; Co. is a Mumbai-based Chartered Accountancy firm providing assurance, taxation, financial reporting and business advisory services. Assignments are supervised by the proprietor and supported by documented procedures, review records and engagement-specific communication.</p>
+          <p>The firm serves organisations across manufacturing and service sectors, with assignments spanning statutory and tax audits, consolidation, internal controls, direct and indirect taxes, accounting support and transaction-specific advisory.</p>
+          <div class="stats">
+            <div class="stat"><strong>Since 2013</strong><span>Professional experience</span></div>
+            <div class="stat"><strong>Since 2018</strong><span>Independent practice</span></div>
+            <div class="stat"><strong>Mumbai</strong><span>Office location</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="framework">
+      <div class="container framework-wrap">
+        <div class="framework-copy">
+          <p class="section-label">Professional Service Framework</p>
+          <h2>Connected support across the reporting cycle</h2>
+          <p>The firm’s assignments are structured around four connected areas. Each area is approached with engagement-specific planning, documentation, review and professional communication.</p>
+        </div>
+        <div class="framework-visual" role="img" aria-label="Professional service framework connecting assurance, financial reporting, tax and compliance, and advisory and controls">
+          <div class="framework-center"><strong>P. V. Gadgil &amp; Co.</strong></div>
+          <div class="framework-node"><span>01</span><strong>Assurance</strong><small>Statutory audit, tax audit, internal audit, stock audit and IFC review</small></div>
+          <div class="framework-node"><span>02</span><strong>Financial Reporting</strong><small>Standalone and consolidated financial statements, schedules and disclosures</small></div>
+          <div class="framework-node"><span>03</span><strong>Tax &amp; Compliance</strong><small>Income-tax, TDS/TCS, GST and entity-specific regulatory support</small></div>
+          <div class="framework-node"><span>04</span><strong>Advisory &amp; Controls</strong><small>Accounting treatment, process risks, reconciliations and transaction analysis</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container">
+        <p class="section-label">Professional Approach</p>
+        <h2>Disciplined engagement delivery</h2>
+        <div class="grid">
+          <article class="card"><span class="card-number">01</span><h3>Planning and Supervision</h3><p>The proprietor is involved in engagement planning, review of significant matters and final reporting.</p></article>
+          <article class="card"><span class="card-number">02</span><h3>Professional Framework</h3><p>Assignments are performed with reference to applicable statutes, Accounting Standards, Standards on Auditing and ICAI guidance.</p></article>
+          <article class="card"><span class="card-number">03</span><h3>Defined Scope</h3><p>The scope, timelines, responsibilities and information requirements are documented for each engagement.</p></article>
+          <article class="card"><span class="card-number">04</span><h3>Review and Communication</h3><p>Material observations and pending matters are discussed with responsible stakeholders during the engagement.</p></article>
+          <article class="card"><span class="card-number">05</span><h3>Working Papers</h3><p>Procedures, evidence, review points and conclusions are recorded in structured working papers.</p></article>
+          <article class="card"><span class="card-number">06</span><h3>Use of Technology</h3><p>Excel, Tally and data-assisted techniques are used where relevant for reconciliation, analysis and documentation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <p class="section-label">Professional Services</p>
+        <h2>Assurance, reporting, tax and compliance</h2>
+        <p class="lead">Services are undertaken subject to engagement-specific scope, professional requirements, independence considerations and applicable law.</p>
+        <div class="grid" style="margin-top: 38px">
+          <article class="card service-card"><h3>Statutory Audit</h3><p>Audits of companies, LLPs and firms; audit planning, risk assessment, substantive and control procedures, reporting and finalisation.</p></article>
+          <article class="card service-card"><h3>Consolidation</h3><p>Group reporting support, consolidation procedures, inter-company reconciliations, eliminations and consolidated financial statement audit support.</p></article>
+          <article class="card service-card"><h3>Tax Audit</h3><p>Tax audits of companies, LLPs, firms and eligible individuals, including clause-wise review, reconciliations and reporting.</p></article>
+          <article class="card service-card"><h3>Internal Audit</h3><p>Risk-based review of processes, internal controls, compliance, transaction cycles and management action points.</p></article>
+          <article class="card service-card"><h3>Internal Financial Controls</h3><p>Design and operating-effectiveness review, control documentation, walkthroughs, testing and deficiency reporting.</p></article>
+          <article class="card service-card"><h3>Stock &amp; Process Audit</h3><p>Physical verification, inventory controls, ageing and valuation review, stock records, process compliance and exception reporting.</p></article>
+          <article class="card service-card"><h3>Financial Statements</h3><p>Preparation, review and finalisation of standalone and consolidated financial statements, schedules and disclosures.</p></article>
+          <article class="card service-card"><h3>Direct Tax and TDS/TCS</h3><p>Income-tax returns, computations, applicability review, withholding compliance, reconciliations, corrections and transaction-specific advice.</p></article>
+          <article class="card service-card"><h3>GST</h3><p>Registration, return filing, ITC review, reconciliations, refund support, advisory and departmental proceedings.</p></article>
+          <article class="card service-card"><h3>Entity Compliance</h3><p>Accounting, tax and regulatory support for LLPs, partnership firms and co-operative housing societies.</p></article>
+          <article class="card service-card"><h3>Accounting Advisory</h3><p>Accounting treatment, policies, estimates, disclosures, transaction analysis and implementation support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="experience">
+      <div class="container">
+        <p class="section-label">Professional Journey</p>
+        <h2>Work experience in chronological order</h2>
+        <p class="lead">The journey commenced with articleship in 2013, followed by employment in assurance and taxation, and progressed to independent practice from December 2018. Associate engagements were undertaken alongside the independent practice.</p>
+        <div class="timeline">
+          <article class="timeline-item"><div class="timeline-date">Apr 2013 – Apr 2016</div><div class="timeline-content"><h3>P. D. Kunte &amp; Co.</h3><div class="role">Articled Assistant</div><p>Statutory audits of listed and unlisted entities; tax audits; limited review; stock audit; income-tax returns; consolidation procedures.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Jun 2016 – Dec 2018</div><div class="timeline-content"><h3>S. V. Pinge &amp; Co.</h3><div class="role">Employee</div><p>Statutory and tax audits of manufacturing companies; transfer pricing audit; returns; consolidation; VAT audit; accounts preparation.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Dec 2018 onwards</div><div class="timeline-content"><h3>P. V. Gadgil &amp; Co.</h3><div class="role">Proprietor</div><p>Independent professional practice covering audit, taxation, financial reporting, accounting advisory and compliance.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Dec 2018 – Apr 2024</div><div class="timeline-content"><h3>Apte &amp; Co.</h3><div class="role">Associate / Head of Audit</div><p>Concurrent professional association. Led the audit function and handled statutory audits, tax audits, transfer pricing audits, corporate tax returns, consolidation and internal audit.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Jan 2019 onwards</div><div class="timeline-content"><h3>S. V. Pinge &amp; Co.</h3><div class="role">Associate</div><p>Concurrent professional association involving assurance, taxation, financial reporting and assignments across manufacturing and other entities.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">2021 – 2023</div><div class="timeline-content"><h3>Shreeniwas Mulay &amp; Co.</h3><div class="role">Associate</div><p>Concurrent professional association involving statutory audits, tax audits and income-tax assignments for companies and individuals.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competencies">
+      <div class="container">
+        <p class="section-label">Professional Experience</p>
+        <h2>Areas of experience and exposure</h2>
+        <div class="competency-grid">
+          <article class="competency"><h3>Corporate Law &amp; Governance</h3><p>Companies Act, 2013; statutory compliance; governance; financial reporting and audit requirements.</p></article>
+          <article class="competency"><h3>Accounting &amp; Reporting</h3><p>Accounting Standards, GAAP, standalone and consolidated financial statements, disclosures and technical accounting.</p></article>
+          <article class="competency"><h3>Audit &amp; Assurance</h3><p>Standards on Auditing, statutory audit, tax audit, internal audit, stock audit, controls and risk assessment.</p></article>
+          <article class="competency"><h3>Direct &amp; Indirect Tax</h3><p>Income-tax, TDS/TCS, GST registrations, returns, ITC, refunds and departmental proceedings.</p></article>
+          <article class="competency"><h3>Consolidation &amp; Group Reporting</h3><p>Consolidation procedures, inter-company reconciliations, eliminations and group financial statement review.</p></article>
+          <article class="competency"><h3>Controls &amp; Analytics</h3><p>Process risks, internal financial controls, reconciliations, data analytics and exception-based review.</p></article>
+          <article class="competency"><h3>Entity Compliance</h3><p>Accounting, taxation and regulatory support for companies, LLPs, firms and co-operative housing societies.</p></article>
+          <article class="competency"><h3>Engagement Administration</h3><p>Communication, report drafting, client coordination, timelines, ethics and confidentiality.</p></article>
+        </div>
+        <div class="chips" aria-label="Technology and sector exposure">
+          <span class="chip">Advanced Microsoft Excel</span><span class="chip">Tally / ERP Environments</span><span class="chip">Data-assisted Audit</span><span class="chip">Manufacturing</span><span class="chip">Service Companies</span><span class="chip">Corporate Groups</span><span class="chip">LLPs &amp; Firms</span><span class="chip">Co-operative Housing Societies</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="process">
+      <div class="container">
+        <p class="section-label">Engagement Process</p>
+        <h2>Clear from scope to delivery</h2>
+        <div class="process">
+          <article class="process-step"><strong>1. Understand</strong><p>Define scope, reporting expectations, timelines and key business risks.</p></article>
+          <article class="process-step"><strong>2. Plan</strong><p>Set information requirements, materiality, responsibilities and review milestones.</p></article>
+          <article class="process-step"><strong>3. Execute</strong><p>Perform focused procedures, maintain issue trackers and communicate observations promptly.</p></article>
+          <article class="process-step"><strong>4. Deliver</strong><p>Provide clear conclusions, agreed action points and professionally documented outputs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-panel">
+        <div class="contact-title">
+          <p class="section-label" style="color:#a8db9f">Contact Details</p>
+          <h2>P. V. Gadgil &amp; Co.</h2>
+          <p>Chartered Accountants<br>FRN 149251W<br>Mumbai</p>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item"><span>Proprietor</span><strong>CA Prathamesh Vaman Gadgil</strong></div>
+          <div class="contact-item"><span>Office</span><strong>58, Vasant Smruti, Pandurang Wadi, Goregaon (East), Mumbai 400064</strong></div>
+          <div class="contact-item"><span>Mobile</span><a href="tel:+918828060284">+91 88280 60284</a></div>
+          <div class="contact-item"><span>Email</span><a href="mailto:prathameshgadgil92@gmail.com">prathameshgadgil92@gmail.com</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <p class="information-note"><strong>Professional Information Note:</strong> This profile contains factual particulars of P. V. Gadgil &amp; Co., Chartered Accountants, and the professional services provided by the firm. It is intended to be furnished in response to a specific professional enquiry or request for credentials and is not intended to constitute solicitation of professional work.</p>
+      <p>© <span id="year"></span> P. V. Gadgil &amp; Co.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
